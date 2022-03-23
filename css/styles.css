@@ -1,3 +1,17 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+#pfp {
+    width: 150px;
+    border-radius: 150px;
+    float: left;
+    padding: 10px;
+}
+
+h1 {
+    color: dodgerblue;
+}
+
+h1:hover {
+    color: DarkBlue;
+}
