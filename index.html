@@ -1,70 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="This is Kenny Chen's personal website">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kenny Chen | Personal Website</title>
-        <link rel="stylesheet" type="text/css" href="/css/styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <h1>About Me</h1>
-            <img src="/img/pfp.jpg" id="pfp" alt="Profile Picture"/>
-            <br>
-            <h2>Kenny Chen</h2>
-            <p>
-                Email: <a href="mailto:kennygchen@yahoo.com">kennygchen@yahoo.com</a>
-                <br>
-                <a href="https://github.com/kennygchen" target="_blank">GitHub</a>
-                <br>
-                <a href="https://www.linkedin.com/in/kennygchen/" target="_blank">LinkedIn</a>
-            </p>
-        </header>
-        <hr>
-        <main>
-            <h1>Projects</h1>
-            <section>
-                <h2>Highway Drifting | Personal Project | February 2022</h2>
-                <p>
-                    <ul>
-                        <li>A 3D endless runner mobile game developed in <b>JavaScrpt</b> using <b>Reat Native</b> cframework.</li>
-                        <li>3D models created using <b>Blender</b></li>
-                        <li>3D scene created by utilizing <b>Three.js</b> library.</li>
-                    </ul>
-                </p>
-            </section>
-            <section>
-                <h2>PlayBox | Personal Project | January 2022</h2>
-                <p>
-                    <ul>
-                        <li>A mobile minigame developed in <b>JavaScript</b> using <b>React Native</b> framework</li>
-                    </ul>
-                </p>
-            </section>
-            <section>
-                <h2>The Astral Eclipse | Software Construction Course Project | November 2021</h2>
-                <p>
-                    <ul>
-                        <li>A text-based role-playing game developed in <b>C++</b></li>
-                        <li>Implemented abstract factory pattern and strategy pattern to achieved better program changes and object reusability.</li>
-                        <li>Debugged with GoogleTest and Valgrind.</li>
-                    </ul>
-                </p>
-            </section>
-            <section>
-                <h2>Real Time Cryptocurrency Quotes Discord Chatbot | Personal Project | April 2021</h2>
-                <p>
-                    <ul>
-                        <li>A discord chatbot developed in <b>Python</b>.</li>
-                        <li>Chatbot effectively integrates Discord and CoinMarketCap APIs to provide real time cryptocurrency prices and market data.</li>
-                    </ul>
-                </p>
-            </section>
-        </main>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is Kenny Chen's personal website">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenny Chen | Personal Website</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body class="main-content">
+    <header class="section sec1 header active" id="home">
+
+    </header>
+    <main>
+        <section class="section sec2 about" id="about"></section>
+        <section class="section sec3 portfolio" id="portfolio"></section>
+        <section class="section sec4 contact" id="contact"></section>
+    </main>
+    <div class="controlls">
+        <div class="control  control-1 active-btn" data-id="home">
+            <i class="fas fa-home"></i>
+        </div>
+        <div class="control control-2 " data-id="about">
+            <i class="fas fa-user"></i>
+        </div>
+        <div class="control control-3" data-id="portfolio">
+            <i class="fas fa-briefcase"></i>
+        </div>
+        <div class="control control-4" data-id="contact">
+            <i class="fas fa-envelope-open"></i>
+        </div>
+    </div>
+</body>
+
 </html>
