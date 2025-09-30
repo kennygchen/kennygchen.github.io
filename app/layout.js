@@ -15,7 +15,7 @@ const geistMono = localFont({
 
 export const metadata = {
   title: "Kenny Chen",
-  description: "Kenny's personal website",
+  description: "Portfolio of Kenny Chen: experience, projects, skills, and contact.",
 };
 
 export default function RootLayout({ children }) {
@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="p-6 bg-[--color-black] md:px-96">
+        <header className="sticky top-0 z-50 p-6 bg-[--color-black] md:px-96">
           <NavLinks />
         </header>
         <main className="flex flex-col p-6 md:px-96">
