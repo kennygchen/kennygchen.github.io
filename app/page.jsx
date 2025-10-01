@@ -9,7 +9,7 @@ export default function Page() {
                 <div className="flex-1 flex flex-col gap-6">
                     <h1 className="text-4xl md:text-6xl font-semibold tracking-tight">Kenny Chen</h1>
                     <p className="text-xl md:text-2xl text-gray-300 max-w-2xl">
-                        👋 Hi, I'm Kenny <br />
+                        👋 Hi, I&apos;m Kenny <br />
                         I enjoy building scalable backend systems, web applications, and occasionally, games.
                     </p>
                     <div className="flex flex-wrap gap-3">
