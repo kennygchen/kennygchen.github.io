@@ -1,0 +1,94 @@
+[
+   {
+      "title": "Mail Sync",
+      "description": "A full-stack email client-server application with Node.js, Express.js, and TypeScript, supporting IMAP/SMTP for email management and contact handling. Built a responsive React interface with Material UI and global state management, and deployed the system to AWS EC2 using Docker Compose for streamlined multi-container orchestration.",
+      "technologies": [
+         "Node.js",
+         "React",
+         "Express.js",
+         "TypeScript",
+         "Material UI",
+         "Docker",
+         "AWS"
+      ],
+      "sourceLink": "https://github.com/kennygchen/mailbag-server-client-docker-compose"
+   },
+   {
+      "title": "Mobile App Design",
+      "description": "Designed and prototyped a mobile airline booking app. Built interactive flows in Figma covering flight search, booking, trip details, and account management. Applied user-centered design principles to ensure intuitive navigation, responsive layouts, and a clean modern interface.",
+      "technologies": [
+         "Figma",
+         "UI/UX Design"
+      ],
+      "sourceLink": "https://www.figma.com/design/QadaiR1EJBLEIP4aMLOMGM/UXAirways-Mobile-App-Design?node-id=12-164"
+   },
+   {
+      "title": "Software Testing and QA of LanguageTool",
+      "description": "Conducted comprehensive testing on LanguageTool, an open-source proofreading software with 200K+ lines of Java code. Applied systematic functional testing, finite state machine modeling, and white-box coverage analysis to strengthen reliability. Configured GitHub Actions for CI/CD, refactored code for improved testability with dependency injection and mocking, and used static analyzers to identify style and runtime issues.",
+      "technologies": [
+         "Java",
+         "JUnit",
+         "CI",
+         "Mockito",
+         "Checkstyle",
+         "SpotBugs"
+      ],
+      "sourceLink": "https://github.com/kennygchen/languagetool"
+   },
+   {
+      "title": "OpReady — Preop Education App",
+      "description": "A preoperative education app that helps patients prepare for surgery. I built the front end with Next.js and Tailwind CSS, and integrated it with Strapi and backend APIs to deliver dynamic content. Awarded 3rd Place at the MedTech Innovation Hackathon.",
+      "technologies": [
+         "Next.js",
+         "JavaScript",
+         "Tailwind CSS",
+         "Strapi",
+         "Figma"
+      ],
+      "sourceLink": "https://preop-ed-portal.vercel.app/"
+   },
+   {
+      "title": "SuperDry — 3D Third‑Person Shooter",
+      "description": "Collaborated with a team to create a 3D third-person shooter game in Unity. I built modular C# scripts for core systems including player movement, responsive aiming, enemy AI, and wave-based battles. The game supported up to 100 simultaneous enemies per wave using optimized object pooling for smooth performance.",
+      "technologies": [
+         "Unity",
+         "C#",
+         "Game Dev",
+         "State Machine",
+         "Rigid Body",
+         "Ray Casting"
+      ],
+      "sourceLink": "https://github.com/Super-Dry/Super-Dry"
+   },
+   {
+      "title": "8-puzzle Solver",
+      "description": "Developed in Python, applying data structures and algorithms to efficiently represent and manipulate puzzle states.",
+      "technologies": [
+         "Python",
+         "A* Algorithm"
+      ],
+      "sourceLink": "https://github.com/kennygchen/8-puzzle-solver"
+   },
+   {
+      "title": "Arduino Object Following Robot",
+      "description": "Built an object-following robot with Arduino and C++, using ultrasonic and infrared sensors for real-time tracking. Programmed autonomous behaviors through embedded systems development, showcasing proficiency in hardware-software integration.",
+      "technologies": [
+         "C++",
+         "Arduino",
+         "Ultrasonic Sensor",
+         "Infrared Sensor",
+         "3D Printing"
+      ],
+      "sourceLink": "https://github.com/kennygchen/Arduino-Object-Following-Robot"
+   },
+   {
+      "title": "Real Time Cryptocurrency Quotes Discord Chatbot",
+      "description": "Developed a Discord Chatbot in Python that leveraged the CoinMarketCap API to provides real-time cryptocurrency quotes and market data to users within a Discord server",
+      "technologies": [
+         "Python",
+         "API",
+         "Chatbot"
+      ],
+      "sourceLink": "https://github.com/kennygchen/stonk_bot"
+   }
+]

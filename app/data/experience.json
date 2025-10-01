@@ -1,0 +1,67 @@
+[
+   {
+      "company": "Amazon Web Services",
+      "position": "SDE Intern",
+      "location": "Seattle, WA",
+      "duration": "Jun 2025 – Sep 2025",
+      "description": "Designed a new benchmarking system for AWS ELB Runtime Service by containerizing the framework with AWS CDK, ECS Fargate, and Lambda, enabling flexible test configurations through JSON. Reduced processing time by 92% through parallel execution, built CloudWatch dashboards for real-time observability, and automated performance analysis with Python notebooks, Lambda, and S3.",
+      "technologies": [
+         "AWS",
+         "AWS CDK",
+         "Python",
+         "ECS Fargate",
+         "Lambda",
+         "CloudWatch",
+         "EventBridge",
+         "S3",
+         "Docker"
+      ],
+      "sourceLink": null
+   },
+   {
+      "company": "c:geo (Open Source)",
+      "position": "Contributor",
+      "location": "Remote",
+      "duration": "May 2025 – Jun 2025",
+      "description": "Contributed to an open-source Android geocaching app with 5 pull requests, adding new features, fixes, and tests. Built a dynamic compass for the cache detail screen, improved log sharing with a Snackbar option, and collaborated with maintainers through code reviews and issue tracking.",
+      "technologies": [
+         "Java",
+         "Android",
+         "UI",
+         "JUnit",
+         "Open Source"
+      ],
+      "sourceLink": "https://github.com/cgeo/cgeo/commits/master/?author=kennygchen"
+   },
+   {
+      "company": "UCR Bit Securer Lab",
+      "position": "Research Intern",
+      "location": "Riverside, CA",
+      "duration": "Apr 2023 – Jun 2024",
+      "description": "Developed a force-directed graph visualization feature in JavaScript for an online disassembler, supporting 1,000+ nodes with built-in search. Refactored an automated binary analysis pipeline from shell to Python for better cross-platform support, and built TypeScript API routes integrated with Ghidra to serve JSON data to a Vue.js front end for interactive graph analysis.",
+      "technologies": [
+         "JavaScript",
+         "Python",
+         "TypeScript",
+         "Vue.js",
+         "Ghidra",
+         "JSON"
+      ],
+      "sourceLink": "https://github.com/kennygchen/deepdiweb/tree/force-graph"
+   },
+   {
+      "company": "Revature",
+      "position": "Backend Developer Training",
+      "location": "Remote",
+      "duration": "Aug 2023 – Nov 2023",
+      "description": "Built a Java-based backend with RESTful APIs to support user registration, login, and message CRUD operations. Implemented JDBC with DAO layers for efficient database access, and applied TDD with JUnit to ensure reliability and full coverage of core functionalities.",
+      "technologies": [
+         "Java",
+         "Spring Boot",
+         "JDBC",
+         "DAO",
+         "JUnit"
+      ],
+      "sourceLink": null
+   }
+]
