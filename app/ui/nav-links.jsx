@@ -163,6 +163,91 @@ export default function NavLinks() {
 
   return (
     <>
+      {/* Mobile Hamburger Menu */}
+      <div className="md:hidden order-first">
+        {/* Hamburger Button */}
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="p-2 rounded-md text-gray-400 hover:text-gray-300 hover:bg-gray-800 transition-colors"
+          aria-label="Toggle mobile menu"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        {/* Mobile Menu Overlay */}
+        <div className={`fixed inset-0 z-50 transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+          <div className="absolute inset-0 bg-black bg-opacity-50" onClick={() => setIsMobileMenuOpen(false)} />
+          <div className={`fixed top-0 left-0 h-full w-64 bg-[--color-black] border-r border-gray-700 shadow-lg transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+            <div className="px-8 py-6">
+              <div className="flex justify-start items-center mb-8">
+                <button
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="p-2 rounded-md text-gray-400 hover:text-gray-300 hover:bg-gray-800 transition-colors"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+              <nav className="flex flex-col space-y-4">
+                {homeSections.map((section) => {
+                  if (section.isLink) {
+                    return (
+                      <Link
+                        key={section.name}
+                        href={section.href}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className={clsx(
+                          'py-3 px-4 rounded-md text-base font-medium transition-colors',
+                          {
+                            'text-[--color-secondary] bg-gray-800': pathname === section.href,
+                            'text-gray-300 hover:text-white hover:bg-gray-800': pathname !== section.href,
+                          }
+                        )}
+                      >
+                        {section.name}
+                      </Link>
+                    );
+                  }
+
+                  // Show section navigation on all pages, but only make them functional on home page
+                  const isActive = isHomePage && (section.isHome ? activeSection === 'hero' || activeSection === '' : activeSection === section.href.substring(1));
+
+                  return (
+                    <button
+                      key={section.name}
+                      onClick={() => handleNavClick(section.href)}
+                      className={clsx(
+                        'py-3 px-4 rounded-md text-base font-medium text-left transition-colors',
+                        {
+                          'text-[--color-secondary] bg-gray-800': isActive,
+                          'text-gray-300 hover:text-white hover:bg-gray-800': !isActive,
+                        }
+                      )}
+                    >
+                      {section.name}
+                    </button>
+                  );
+                })}
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Desktop Navigation */}
       <nav className="hidden md:flex gap-4 lg:gap-6 text-base lg:text-lg font-medium">
         {homeSections.map((section) => {
@@ -204,102 +289,6 @@ export default function NavLinks() {
           );
         })}
       </nav>
-
-      {/* Mobile Hamburger Menu */}
-      <div className="md:hidden">
-        {/* Hamburger Button */}
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="p-2 rounded-md text-gray-400 hover:text-gray-300 hover:bg-gray-800 transition-colors"
-          aria-label="Toggle mobile menu"
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            {isMobileMenuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            )}
-          </svg>
-        </button>
-
-        {/* Mobile Menu Overlay */}
-        {isMobileMenuOpen && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-50" onClick={() => setIsMobileMenuOpen(false)}>
-            <div className="fixed top-0 right-0 h-full w-64 bg-[--color-black] border-l border-gray-700 shadow-lg">
-              <div className="p-6">
-                <div className="flex justify-between items-center mb-8">
-                  <h2 className="text-lg font-semibold text-white">Menu</h2>
-                  <button
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="p-2 rounded-md text-gray-400 hover:text-gray-300 hover:bg-gray-800 transition-colors"
-                  >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                </div>
-
-                <nav className="flex flex-col space-y-4">
-                  {homeSections.map((section) => {
-                    if (section.isLink) {
-                      return (
-                        <Link
-                          key={section.name}
-                          href={section.href}
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className={clsx(
-                            'py-3 px-4 rounded-md text-base font-medium transition-colors',
-                            {
-                              'text-[--color-secondary] bg-gray-800': pathname === section.href,
-                              'text-gray-300 hover:text-white hover:bg-gray-800': pathname !== section.href,
-                            }
-                          )}
-                        >
-                          {section.name}
-                        </Link>
-                      );
-                    }
-
-                    // Show section navigation on all pages, but only make them functional on home page
-                    const isActive = isHomePage && (section.isHome ? activeSection === 'hero' || activeSection === '' : activeSection === section.href.substring(1));
-
-                    return (
-                      <button
-                        key={section.name}
-                        onClick={() => handleNavClick(section.href)}
-                        className={clsx(
-                          'py-3 px-4 rounded-md text-base font-medium text-left transition-colors',
-                          {
-                            'text-[--color-secondary] bg-gray-800': isActive,
-                            'text-gray-300 hover:text-white hover:bg-gray-800': !isActive,
-                          }
-                        )}
-                      >
-                        {section.name}
-                      </button>
-                    );
-                  })}
-                </nav>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
     </>
   );
 }
