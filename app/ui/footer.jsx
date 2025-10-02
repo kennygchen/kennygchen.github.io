@@ -2,7 +2,7 @@ export default function Footer() {
    return (
       <footer className="bg-[#1b1b1b] border-t border-gray-700 px-8 py-6 sm:px-6 md:px-32 lg:px-48 xl:px-64">
          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div className="text-sm text-gray-400">
+            <div className="text-body-sm text-[--color-text-muted]">
                © {new Date().getFullYear()} Kenny Chen. All rights reserved.
             </div>
             <div className="flex gap-3">

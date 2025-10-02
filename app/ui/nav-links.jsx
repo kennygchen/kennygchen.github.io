@@ -17,7 +17,7 @@ export default function NavLinks() {
   const pathname = usePathname();
   const router = useRouter();
   const isHomePage = pathname === '/';
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState('hero');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -45,22 +45,82 @@ export default function NavLinks() {
       const viewportHeight = window.innerHeight;
       const header = document.querySelector('header');
       const headerHeight = header ? header.offsetHeight : 80;
-      const viewportCenter = (viewportHeight / 2) + headerHeight;
+      const scrollTop = window.scrollY;
 
       let activeId = 'hero'; // Default to hero
 
-      for (const section of sections) {
-        const sectionCenter = section.top + (section.height / 2);
-        const distanceFromCenter = Math.abs(sectionCenter - viewportCenter);
+      // If we're at the very top of the page (within 100px), always show Home as active
+      if (scrollTop <= 100) {
+        activeId = 'hero';
+      } else {
+        // Find which section we should highlight based on scroll position
+        const sectionsWithPositions = [];
 
-        // If this section is in the viewport and closer to center
-        if (section.top <= viewportCenter && section.bottom >= viewportCenter) {
-          activeId = section.id;
-          break;
+        for (const section of sections) {
+          const element = document.getElementById(section.id);
+          if (element) {
+            const elementTop = element.offsetTop - headerHeight - 100; // More generous offset
+            sectionsWithPositions.push({
+              id: section.id,
+              top: elementTop,
+              element: element
+            });
+          }
         }
-        // If this section is above the center, it might be the active one
-        else if (section.bottom > 0 && section.top < viewportCenter) {
-          activeId = section.id;
+
+        // Sort sections by their top position
+        sectionsWithPositions.sort((a, b) => a.top - b.top);
+
+        // Check if we're near the bottom of the page
+        const documentHeight = Math.max(
+          document.body.scrollHeight,
+          document.body.offsetHeight,
+          document.documentElement.clientHeight,
+          document.documentElement.scrollHeight,
+          document.documentElement.offsetHeight
+        );
+        const windowHeight = window.innerHeight;
+        const scrollBottom = scrollTop + windowHeight;
+        const isNearBottom = scrollBottom >= documentHeight - 100;
+
+        // Special handling for Education section (last section)
+        const educationElement = document.getElementById('education');
+
+        // Debug logging (remove this later)
+        if (scrollTop > 1000) { // Only log when we're scrolled down
+          console.log('Debug scroll info:', {
+            scrollTop,
+            scrollBottom,
+            documentHeight,
+            isNearBottom,
+            educationExists: !!educationElement,
+            educationTop: educationElement ? educationElement.offsetTop - headerHeight - 200 : 'N/A'
+          });
+        }
+
+        if (educationElement && isNearBottom) {
+          activeId = 'education';
+        } else if (educationElement) {
+          const educationTop = educationElement.offsetTop - headerHeight - 200; // Even more generous for education
+          if (scrollTop >= educationTop) {
+            activeId = 'education';
+          } else {
+            // Find the last section whose top we've passed (excluding education which we handled above)
+            for (let i = sectionsWithPositions.length - 1; i >= 0; i--) {
+              if (sectionsWithPositions[i].id !== 'education' && scrollTop >= sectionsWithPositions[i].top) {
+                activeId = sectionsWithPositions[i].id;
+                break;
+              }
+            }
+          }
+        } else {
+          // Fallback: Find the last section whose top we've passed
+          for (let i = sectionsWithPositions.length - 1; i >= 0; i--) {
+            if (scrollTop >= sectionsWithPositions[i].top) {
+              activeId = sectionsWithPositions[i].id;
+              break;
+            }
+          }
         }
       }
 
@@ -190,7 +250,7 @@ export default function NavLinks() {
         <div className={`fixed inset-0 z-50 transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
           <div className="absolute inset-0 bg-black bg-opacity-50" onClick={() => setIsMobileMenuOpen(false)} />
           <div className={`fixed top-0 left-0 h-full w-64 bg-[--color-black] border-r border-gray-700 shadow-lg transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-            <div className="px-8 py-6">
+            <div className="px-8 py-4">
               <div className="flex justify-start items-center mb-8">
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -211,7 +271,7 @@ export default function NavLinks() {
                         href={section.href}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className={clsx(
-                          'py-3 px-4 rounded-md text-base font-medium transition-colors',
+                          'py-3 px-4 rounded-md text-body font-medium transition-colors',
                           {
                             'text-[--color-secondary] bg-gray-800': pathname === section.href,
                             'text-gray-300 hover:text-white hover:bg-gray-800': pathname !== section.href,
@@ -231,7 +291,7 @@ export default function NavLinks() {
                       key={section.name}
                       onClick={() => handleNavClick(section.href)}
                       className={clsx(
-                        'py-3 px-4 rounded-md text-base font-medium text-left transition-colors',
+                        'py-3 px-4 rounded-md text-body font-medium text-left transition-colors',
                         {
                           'text-[--color-secondary] bg-gray-800': isActive,
                           'text-gray-300 hover:text-white hover:bg-gray-800': !isActive,
@@ -249,7 +309,7 @@ export default function NavLinks() {
       </div>
 
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex gap-4 lg:gap-6 text-base lg:text-lg font-medium">
+      <nav className="hidden md:flex gap-4 lg:gap-6 text-body font-medium">
         {homeSections.map((section) => {
           if (section.isLink) {
             return (

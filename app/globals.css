@@ -7,6 +7,10 @@
   --color-black: #171717;
   --color-secondary: #5191d2;
   --color-white: #EDF7F6;
+  --color-text-primary: #EDF7F6;
+  --color-text-secondary: #D1D5DB; /* gray-300 */
+  --color-text-muted: #9CA3AF; /* gray-400 */
+  --color-text-subtle: #6B7280; /* gray-500 */
   --br-sm-2: 14px;
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .4);
 }
@@ -20,6 +24,5 @@
 
 body {
   background-color: var(--color-primary);
-  font-size: 1.1rem;
-  color: var(--color-white);
+  color: var(--color-text-primary);
 }

@@ -7,11 +7,11 @@ export default function Page() {
    return (
       <div className="space-y-4 sm:space-y-6">
          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold">Resume</h1>
+            <h1 className="text-h1 font-semibold">Resume</h1>
             <a
                href={`/Kenny_Chen_Resume.pdf?t=${Date.now()}`}
                download
-               className="px-3 py-2 sm:px-4 sm:py-2 rounded-md bg-[--color-secondary] text-[--color-white] hover:opacity-90 text-sm sm:text-base text-center"
+               className="px-4 py-2 rounded-md bg-[--color-secondary] text-[--color-white] hover:opacity-90 text-body text-center"
             >
                Download PDF
             </a>
@@ -25,7 +25,7 @@ export default function Page() {
             />
          </div>
 
-         <p className="text-gray-400 text-xs sm:text-sm">
+         <p className="text-[--color-text-muted] text-body-sm">
             If the embed does not load, <a className="underline" href={`/Kenny_Chen_Resume.pdf?t=${Date.now()}`} target="_blank" rel="noreferrer noopener">open the PDF in a new tab</a>.
          </p>
       </div>
