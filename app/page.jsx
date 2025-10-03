@@ -5,11 +5,11 @@ export default function Page() {
     return (
         <div className="space-y-12 sm:space-y-16 md:space-y-20">
             {/* Home */}
-            <section id="hero" className="bg-gradient-to-br from-blue-500/20 via-blue-400/10 to-cyan-400/20 hover:from-blue-500/30 hover:via-blue-400/20 hover:to-cyan-400/30 active:from-blue-500/40 active:via-blue-400/30 active:to-cyan-400/40 rounded-2xl p-6 sm:p-8 md:p-10 border border-blue-500/20 hover:border-blue-400/40 active:border-blue-400/60 transition-all duration-500 ease-out hover:shadow-lg hover:shadow-blue-500/10 active:shadow-xl active:shadow-blue-500/20 hover:scale-[1.01] active:scale-[0.99] cursor-pointer">
+            <section id="hero" className="bg-gradient-to-br from-blue-500/20 via-blue-400/10 to-cyan-400/20 hover:from-blue-500/30 hover:via-blue-400/20 hover:to-cyan-400/30 active:from-blue-500/40 active:via-blue-400/30 active:to-cyan-400/40 rounded-2xl p-6 sm:p-8 md:p-10 transition-all duration-500 ease-out hover:shadow-lg hover:shadow-[--color-secondary]/20 active:shadow-xl active:shadow-[--color-secondary]/30 hover:scale-[1.01] active:scale-[0.99] cursor-pointer">
                 {/* Mobile: Name and Profile Picture on same row */}
                 <div className="flex items-center justify-between sm:hidden">
                     <h1 className="text-h1 font-semibold tracking-tight">Kenny Chen</h1>
-                    <div className="w-16 h-16 rounded-full border-2 border-blue-300/50 overflow-hidden">
+                    <div className="w-16 h-16 rounded-full border-2 border-[--color-secondary]/50 overflow-hidden shadow-lg">
                         <img src="/me.jpg" alt="Kenny Chen" className="w-full h-full object-cover" />
                     </div>
                 </div>
@@ -20,7 +20,7 @@ export default function Page() {
                         <h1 className="text-h1 sm:text-display font-semibold tracking-tight">Kenny Chen</h1>
                     </div>
                     <div className="flex-shrink-0">
-                        <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full border-2 border-blue-300/50 overflow-hidden">
+                        <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full border-2 border-[--color-secondary]/50 overflow-hidden shadow-lg">
                             <img src="/me.jpg" alt="Kenny Chen" className="w-full h-full object-cover" />
                         </div>
                     </div>
@@ -35,7 +35,7 @@ export default function Page() {
                             <div className="flex flex-wrap gap-3 sm:gap-4">
                                 <a
                                     href="mailto:kennygchen@yahoo.com"
-                                    className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[--color-secondary] text-[--color-white] hover:opacity-90 flex items-center justify-center transition-opacity"
+                                    className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[--color-secondary] hover:bg-[--color-secondary-hover] text-[--color-white] flex items-center justify-center transition-all duration-200 hover:shadow-lg hover:shadow-[--color-secondary]/25 hover:scale-110 active:scale-95"
                                     aria-label="Send email"
                                 >
                                     <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -46,7 +46,7 @@ export default function Page() {
                                     href="https://www.linkedin.com/in/kennygchen"
                                     target="_blank"
                                     rel="noreferrer noopener"
-                                    className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-gray-600 text-gray-200 hover:bg-gray-800 hover:border-gray-500 flex items-center justify-center transition-all"
+                                    className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-slate-600 text-slate-300 hover:bg-slate-800 hover:shadow-[--color-secondary]/10 hover:border-[--color-secondary] hover:text-[--color-secondary-light] flex items-center justify-center transition-all duration-200 hover:shadow-lg hover:shadow-[--color-secondary]/20 hover:scale-110 active:scale-95"
                                     aria-label="LinkedIn profile"
                                 >
                                     <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -57,7 +57,7 @@ export default function Page() {
                                     href="https://github.com/kennygchen"
                                     target="_blank"
                                     rel="noreferrer noopener"
-                                    className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-gray-600 text-gray-200 hover:bg-gray-800 hover:border-gray-500 flex items-center justify-center transition-all"
+                                    className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-slate-600 text-slate-300 hover:bg-slate-800 hover:shadow-[--color-secondary]/10 hover:border-[--color-secondary] hover:text-[--color-secondary-light] flex items-center justify-center transition-all duration-200 hover:shadow-lg hover:shadow-[--color-secondary]/20 hover:scale-110 active:scale-95"
                                     aria-label="GitHub profile"
                                 >
                                     <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -75,7 +75,7 @@ export default function Page() {
                 <h2 className="text-h2 font-semibold">Experience</h2>
                 <div className="space-y-4">
                     {experienceData.map((experience, index) => (
-                        <div key={index} className="rounded-lg border border-gray-700 bg-[#1b1b1b] p-4 sm:p-6 transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-[--color-secondary]">
+                        <div key={index} className="rounded-lg border border-gray-700 bg-[#1b1b1b] p-4 sm:p-6 transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-[--color-secondary]/10 hover:border-[--color-secondary]">
                             <p className="font-semibold text-body">{experience.company} — {experience.position}</p>
                             <p className="text-body-sm text-[--color-text-muted]">{experience.location} • {experience.duration}</p>
                             <p className="text-[--color-text-secondary] mt-2 text-body">{experience.description}</p>
@@ -86,7 +86,7 @@ export default function Page() {
                             </div>
                             {experience.sourceLink && (
                                 <div className="mt-4 flex">
-                                    <a href={experience.sourceLink} target="_blank" rel="noreferrer noopener" className="px-3 py-1.5 min-w-[96px] text-center rounded-md bg-[--color-secondary] text-[--color-white] hover:opacity-90 text-body-sm">Source</a>
+                                    <a href={experience.sourceLink} target="_blank" rel="noreferrer noopener" className="px-4 py-2 min-w-[96px] text-center rounded-lg bg-[--color-secondary] hover:bg-[--color-secondary-hover] text-[--color-white] font-medium text-body-sm transition-all duration-200 hover:shadow-lg hover:shadow-[--color-secondary]/25 hover:scale-105 active:scale-95">Source</a>
                                 </div>
                             )}
                         </div>
@@ -99,7 +99,7 @@ export default function Page() {
                 <h2 className="text-h2 font-semibold">Projects</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                     {projectsData.map((project, index) => (
-                        <article key={index} className="rounded-lg border border-gray-700 bg-[#1b1b1b] p-4 sm:p-6 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-[--color-secondary]">
+                        <article key={index} className="rounded-lg border border-gray-700 bg-[#1b1b1b] p-4 sm:p-6 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-[--color-secondary]/10 hover:border-[--color-secondary]">
                             <h3 className="text-h3 font-semibold">{project.title}</h3>
                             <p className="mt-2 text-[--color-text-secondary] text-body">{project.description}</p>
                             <div className="mt-4 flex flex-wrap gap-2 text-caption text-[--color-text-muted]">
@@ -109,7 +109,7 @@ export default function Page() {
                             </div>
                             {project.sourceLink && (
                                 <div className="mt-4 flex">
-                                    <a href={project.sourceLink} target="_blank" rel="noreferrer noopener" className="px-3 py-1.5 min-w-[96px] text-center rounded-md bg-[--color-secondary] text-[--color-white] hover:opacity-90 text-body-sm">Source</a>
+                                    <a href={project.sourceLink} target="_blank" rel="noreferrer noopener" className="px-4 py-2 min-w-[96px] text-center rounded-lg bg-[--color-secondary] hover:bg-[--color-secondary-hover] text-[--color-white] font-medium text-body-sm transition-all duration-200 hover:shadow-lg hover:shadow-[--color-secondary]/25 hover:scale-105 active:scale-95">Source</a>
                                 </div>
                             )}
                         </article>
@@ -120,12 +120,12 @@ export default function Page() {
             {/* Education */}
             <section id="education" className="space-y-4 sm:space-y-6">
                 <h2 className="text-h2 font-semibold">Education</h2>
-                <div className="rounded-lg border border-gray-700 bg-[#1b1b1b] p-4 sm:p-6 space-y-1 transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-[--color-secondary]">
+                <div className="rounded-lg border border-gray-700 bg-[#1b1b1b] p-4 sm:p-6 space-y-1 transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-[--color-secondary]/10 hover:border-[--color-secondary]">
                     <p className="font-semibold text-body">University of California, Irvine</p>
                     <p className="font-semibold text-body">Master of Software Engineering</p>
                     <p className="text-[--color-text-secondary] text-body-sm">Expected December 2025 • GPA 4.00</p>
                 </div>
-                <div className="rounded-lg border border-gray-700 bg-[#1b1b1b] p-4 sm:p-6 space-y-1 transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-[--color-secondary]">
+                <div className="rounded-lg border border-gray-700 bg-[#1b1b1b] p-4 sm:p-6 space-y-1 transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-[--color-secondary]/10 hover:border-[--color-secondary]">
                     <p className="font-semibold text-body">University of California, Riverside</p>
                     <p className="font-semibold text-body">B.S. Computer Science (Cum Laude)</p>
                     <p className="text-[--color-text-secondary] text-body-sm">June 2023 • GPA 3.74</p>

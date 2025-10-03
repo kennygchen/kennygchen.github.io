@@ -11,13 +11,13 @@ export default function Page() {
             <a
                href={`/Kenny_Chen_Resume.pdf?t=${Date.now()}`}
                download
-               className="px-4 py-2 rounded-md bg-[--color-secondary] text-[--color-white] hover:opacity-90 text-body text-center"
+               className="px-6 py-3 rounded-lg bg-[--color-secondary] hover:bg-[--color-secondary-hover] text-[--color-white] font-medium text-body transition-all duration-200 hover:shadow-lg hover:shadow-[--color-secondary]/25 hover:scale-105 active:scale-95"
             >
                Download PDF
             </a>
          </div>
 
-         <div className="rounded-lg border border-gray-700 overflow-hidden bg-[#1b1b1b]">
+         <div className="rounded-lg border border-gray-700 overflow-hidden bg-[#1b1b1b] shadow-lg">
             <iframe
                title="Kenny Chen Resume"
                src={`/Kenny_Chen_Resume.pdf?t=${Date.now()}#view=FitH`}
@@ -26,7 +26,7 @@ export default function Page() {
          </div>
 
          <p className="text-[--color-text-muted] text-body-sm">
-            If the embed does not load, <a className="underline" href={`/Kenny_Chen_Resume.pdf?t=${Date.now()}`} target="_blank" rel="noreferrer noopener">open the PDF in a new tab</a>.
+            If the embed does not load, <a className="underline text-[--color-secondary] hover:text-[--color-secondary-light] transition-colors" href={`/Kenny_Chen_Resume.pdf?t=${Date.now()}`} target="_blank" rel="noreferrer noopener">open the PDF in a new tab</a>.
          </p>
       </div>
    );

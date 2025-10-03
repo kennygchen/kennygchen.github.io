@@ -5,14 +5,20 @@
 :root {
   --color-primary: #212121;
   --color-black: #171717;
-  --color-secondary: #5191d2;
+  --color-secondary: #3b82f6;
+  --color-secondary-hover: #2563eb;
+  --color-secondary-light: #60a5fa;
+  --color-accent: #06b6d4;
+  --color-accent-hover: #0891b2;
   --color-white: #EDF7F6;
   --color-text-primary: #EDF7F6;
-  --color-text-secondary: #D1D5DB; /* gray-300 */
-  --color-text-muted: #9CA3AF; /* gray-400 */
-  --color-text-subtle: #6B7280; /* gray-500 */
+  --color-text-secondary: #D1D5DB;
+  --color-text-muted: #9CA3AF;
+  --color-text-subtle: #6B7280;
   --br-sm-2: 14px;
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .4);
+  --box-shadow-blue: 0 4px 20px rgba(59, 130, 246, 0.15);
+  --box-shadow-cyan: 0 4px 20px rgba(6, 182, 212, 0.15);
 }
 
 /* @media (prefers-color-scheme: dark) {

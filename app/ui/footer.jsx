@@ -8,7 +8,7 @@ export default function Footer() {
             <div className="flex gap-3">
                <a
                   href="mailto:kennygchen@yahoo.com"
-                  className="w-10 h-10 rounded-full bg-[--color-secondary] text-[--color-white] hover:opacity-90 flex items-center justify-center transition-opacity"
+                  className="w-10 h-10 rounded-full bg-[--color-secondary] hover:bg-[--color-secondary-hover] text-[--color-white] flex items-center justify-center transition-all duration-200 hover:shadow-lg hover:shadow-[--color-secondary]/20 hover:scale-110 active:scale-95 duration-200 hover:shadow-lg hover:shadow-[--color-secondary]/25 hover:scale-110 active:scale-95"
                   aria-label="Send email"
                >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -19,7 +19,7 @@ export default function Footer() {
                   href="https://www.linkedin.com/in/kennygchen"
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="w-10 h-10 rounded-full border border-gray-600 text-gray-200 hover:bg-gray-800 hover:border-gray-500 flex items-center justify-center transition-all"
+                  className="w-10 h-10 rounded-full border border-gray-600 text-gray-200 hover:bg-gray-800 hover:border-[--color-secondary] hover:text-[--color-secondary-light] flex items-center justify-center transition-all duration-200 hover:shadow-lg hover:shadow-[--color-secondary]/20 hover:scale-110 active:scale-95"
                   aria-label="LinkedIn profile"
                >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -30,7 +30,7 @@ export default function Footer() {
                   href="https://github.com/kennygchen"
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="w-10 h-10 rounded-full border border-gray-600 text-gray-200 hover:bg-gray-800 hover:border-gray-500 flex items-center justify-center transition-all"
+                  className="w-10 h-10 rounded-full border border-gray-600 text-gray-200 hover:bg-gray-800 hover:border-[--color-secondary] hover:text-[--color-secondary-light] flex items-center justify-center transition-all duration-200 hover:shadow-lg hover:shadow-[--color-secondary]/20 hover:scale-110 active:scale-95"
                   aria-label="GitHub profile"
                >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
