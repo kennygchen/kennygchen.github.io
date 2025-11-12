@@ -1,5 +1,19 @@
 [
    {
+      "title": "DataLake GUI - UC Irvine Office of Information Technology",
+      "description": "As part of my capstone project at UC Irvine, I worked with the Office of Information Technology to develop the OIT DataLake GUI, a web application built with React and hosted on AWS Amplify. The system connects to backend services through API Gateway and Lambda, allowing engineers to retrieve and update configuration templates stored in S3 and DynamoDB through a secure, browser-based interface that replaced manual JSON editing. I implemented user authentication using AWS Cognito with OAuth 2.0 integration to UCI Shibboleth, enabling institutional Single Sign-On and controlled access to the application. The deployment leveraged Amplify’s automated CI/CD and serverless hosting for easy maintenance and alignment with OIT’s Terraform infrastructure.",
+      "technologies": [
+         "React",
+         "TypeScript",
+         "AWS",
+         "AWS Amplify",
+         "AWS Cognito",
+         "AWS API Gateway",
+         "OAuth 2.0",
+         "UI/UX Design"
+      ]
+   },
+   {
       "title": "Mail Sync",
       "description": "A full-stack email client-server application with Node.js, Express.js, and TypeScript, supporting IMAP/SMTP for email management and contact handling. Built a responsive React interface with Material UI and global state management, and deployed the system to AWS EC2 using Docker Compose for streamlined multi-container orchestration.",
       "technologies": [
