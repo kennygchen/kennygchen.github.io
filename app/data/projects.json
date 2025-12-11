@@ -1,6 +1,21 @@
 [
    {
-      "title": "DataLake GUI - UC Irvine Office of Information Technology",
+      "title": "Multi-Agent AI Coder",
+      "description": "This project is a multi-agent software generation pipeline that transforms natural language into fully runnable applications. I built a Python-based MCP orchestrator that coordinates four specialized agents and reliably handles 500k+ token workloads in a single run. To ensure stability during long generation chains, I implemented a rate-limiting and usage-tracking subsystem that distributes requests across multiple LLM providers, preventing quota exhaustion. I also developed an interactive Gradio interface that visualizes each agent step, displays structured outputs, and logs detailed token usage to improve debugging and developer insight.",
+      "technologies": [
+         "Python",
+         "LangChain",
+         "MCP (Model Context Protocol)",
+         "LLM",
+         "gemini-2.5-flash",
+         "Gradio",
+         "Prompt Engineering",
+         "Token Usage Tracking"
+      ],
+      "sourceLink": "https://github.com/kennygchen/BudgetMaster"
+   },
+   {
+      "title": "Data Lake GUI",
       "description": "As part of my capstone project at UC Irvine, I worked with the Office of Information Technology to develop the OIT DataLake GUI, a web application built with React and hosted on AWS Amplify. The system connects to backend services through API Gateway and Lambda, allowing engineers to retrieve and update configuration templates stored in S3 and DynamoDB through a secure, browser-based interface that replaced manual JSON editing. I implemented user authentication using AWS Cognito with OAuth 2.0 integration to UCI Shibboleth, enabling institutional Single Sign-On and controlled access to the application. The deployment leveraged Amplify’s automated CI/CD and serverless hosting for easy maintenance and alignment with OIT’s Terraform infrastructure.",
       "technologies": [
          "React",
@@ -10,6 +25,7 @@
          "AWS Cognito",
          "AWS API Gateway",
          "OAuth 2.0",
+         "SAML",
          "UI/UX Design"
       ]
    },
