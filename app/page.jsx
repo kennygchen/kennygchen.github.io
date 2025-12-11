@@ -8,7 +8,7 @@ export default function Page() {
             <section id="hero" className="bg-gradient-to-br from-blue-500/20 via-blue-400/10 to-cyan-400/20 hover:from-blue-500/30 hover:via-blue-400/20 hover:to-cyan-400/30 active:from-blue-500/40 active:via-blue-400/30 active:to-cyan-400/40 rounded-2xl p-6 sm:p-8 md:p-10 transition-all duration-500 ease-out hover:shadow-lg hover:shadow-[--color-secondary]/20 active:shadow-xl active:shadow-[--color-secondary]/30 hover:scale-[1.01] active:scale-[0.99] cursor-pointer">
                 {/* Mobile: Name and Profile Picture on same row */}
                 <div className="flex items-center justify-between sm:hidden">
-                    <h1 className="text-h1 font-semibold tracking-tight">Hello, World! I'm Kenny</h1>
+                    <h1 className="text-h1 font-semibold tracking-tight">Hello, World! I&apos;m Kenny</h1>
                     <div className="w-16 h-16 rounded-full border-2 border-[--color-secondary]/50 overflow-hidden shadow-lg">
                         <img src="/me.jpg" alt="Kenny Chen" className="w-full h-full object-cover" />
                     </div>
@@ -17,7 +17,7 @@ export default function Page() {
                 {/* Desktop: Name on left, Profile Picture on right */}
                 <div className="hidden sm:flex sm:items-center sm:justify-between sm:gap-8">
                     <div className="flex-1">
-                        <h1 className="text-h1 sm:text-display font-semibold tracking-tight">Hello, World! I'm Kenny</h1>
+                        <h1 className="text-h1 sm:text-display font-semibold tracking-tight">Hello, World! I&apos;m Kenny</h1>
                     </div>
                     <div className="flex-shrink-0">
                         <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full border-2 border-[--color-secondary]/50 overflow-hidden shadow-lg">
